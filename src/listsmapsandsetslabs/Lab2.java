@@ -38,5 +38,14 @@ public class Lab2 {
         for (int i = 0; i < list.size(); i++){
             System.out.println(list.get(i));
         }
+        
+        // subList method uses a start index (not inclusive) and an end index (Inclusive)
+        System.out.println("This is part of the list " + list.subList(2 , 4));
+        
+        // This version of remove uses an index
+        list.remove(1);
+        for (int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
+        }
     }
 }
