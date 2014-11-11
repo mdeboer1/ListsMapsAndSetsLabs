@@ -26,7 +26,7 @@ public class Lab5 {
         Employee emp4 = new Employee("White", "Sue", "111-11-1111");
         Employee emp5 = new Employee("Anderson", "Neo", "333-33-3333");
         
-        Map map = new HashMap();
+        Map<String, Employee> map = new HashMap<>();
         
         // I used SSN as the key as it is the unique identifier that we used in 
         // the overridden .equals method in the Employee class.  It Employee class
@@ -40,9 +40,9 @@ public class Lab5 {
         // Sort through map to see what was accepted, since emp1 and emp4 have
         // a matching SSN, it eliminates emp1 from the Map.
         System.out.println("Print out contents of map via the key.");
-        Set keys = map.keySet();
+        Set<String> keys = map.keySet();
         for (Object key : keys){
-            System.out.println(map.get(key));
+            System.out.println(key);
         }
         //Print out the values
         System.out.println("\nPrint out contents of map via the value");
@@ -60,8 +60,9 @@ public class Lab5 {
         map.put(emp2.getSsn(), emp5);
 
         // Print out the keys in the Map
+
         for (Object key : keys){
-            System.out.println(map.get(key));
+            System.out.println(key);
         }
         //Print out the values
         System.out.println("\nPrint out contents of map via value after emp5 added.");
